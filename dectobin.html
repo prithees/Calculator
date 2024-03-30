@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal to binary</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function decimalToBinary(N) {
+            let binary = ''; 
+            while (N > 0) {
+                binary = (N % 2) + binary;
+                N = Math.floor(N / 2);
+            }
+            return binary;
+        }
+        function display() {
+            let input = document.getElementById("calc").value;
+            let output = decimalToBinary(input);
+
+            document.getElementById("calc").value = output;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Decimal To Binary</h1>
+    </div>
+    <div style="height: 480px;" class="first formstyle">
+        <form name="form1">
+            <input id="calc" type="text" name="answer"> <br> <br>
+
+            <input class="binary" type="button" value="1" onclick="form1.answer.value += '1' ">
+            <input class="binary" type="button" value="2" onclick="form1.answer.value += '2' ">
+            <input class="binary" type="button" value="3" onclick="form1.answer.value += '3' "><br> <br>
+            <input class="binary" type="button" value="4" onclick="form1.answer.value += '4' ">
+            <input class="binary" type="button" value="5" onclick="form1.answer.value += '5' ">
+            <input class="binary" type="button" value="6" onclick="form1.answer.value += '6' "><br> <br>
+            <input class="binary" type="button" value="7" onclick="form1.answer.value += '7' ">
+            <input class="binary" type="button" value="8" onclick="form1.answer.value += '8' ">
+            <input class="binary" type="button" value="9" onclick="form1.answer.value += '9' "><br> <br>
+            <input class="binary" type="button" value="9" onclick="form1.answer.value += '9' ">
+            <input class="bin binary" type="button" value="Binary" onclick="display()"><br>
+            <input class="four decimal" type="button" value="Clear All" onclick="form1.answer.value = ' ' ">
+        </form>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary to Decimal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function binary(a){
+            var value = parseInt(a,2);
+            return value;
+        }
+        function display(){
+            let input = document.getElementById("Calculator").value;
+            let output = binary(input);
+            document.getElementById("Calculator").value=output;
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        Binary To Decimal 
+     </h1>
+     <div class="second formstyle">
+         <form name="form2">
+             <input id="Calculator" type="text" name="answer"> <br> <br>
+             <input class="one decimal" type="button" value="1" onclick="form2.answer.value += '1' ">
+             <input class="two decimal" type="button" value="0" onclick="form2.answer.value += '0' ">
+             <input class=" three decimal" type="button" value="binary" onclick="display()">
+             <input class="four decimal" type="button" value="clear all" onclick="form2.answer.value = ' ' ">
+         </form>
+     </div>
+    
+</body>
+</html>
